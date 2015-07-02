@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\secp256k1\src\secp256k1.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\include\secp256k1.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\ecdsa.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\ecdsa_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\eckey.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\eckey_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\ecmult.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\ecmult_gen.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\ecmult_gen_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\ecmult_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\field.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\field_10x26.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\field_10x26_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\field_5x52.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\field_5x52_asm_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\field_5x52_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\field_5x52_int128_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\field_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\group.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\group_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\hash.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\hash_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\num.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\num_gmp.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\num_gmp_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\num_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\scalar.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\scalar_4x64.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\scalar_4x64_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\scalar_8x32.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\scalar_8x32_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\scalar_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\testrand.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\testrand_impl.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\secp256k1\src\util.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{86C5CDB5-70FE-4D59-B381-435EDA1ED658}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>leveldb</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;USE_FIELD_10X26=1;USE_FIELD_INV_BUILTIN=1;USE_NUM_NONE=1;USE_SCALAR_8X32=1;USE_SCALAR_INV_BUILTIN=1;_DEBUG;_LIB;LEVELDB_PLATFORM_WINDOWS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\bitcoin\src\secp256k1\include;$(ProjectDir)\bitcoin\src\secp256k1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;USE_FIELD_10X26=1;USE_FIELD_INV_BUILTIN=1;USE_NUM_NONE=1;USE_SCALAR_8X32=1;USE_SCALAR_INV_BUILTIN=1;_DEBUG;_LIB;LEVELDB_PLATFORM_WINDOWS</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\bitcoin\src\secp256k1\include;$(ProjectDir)\bitcoin\src\secp256k1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;USE_FIELD_10X26=1;USE_FIELD_INV_BUILTIN=1;USE_NUM_NONE=1;USE_SCALAR_8X32=1;USE_SCALAR_INV_BUILTIN=1;LEVELDB_PLATFORM_WINDOWS;_LIB</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\bitcoin\src\secp256k1\include;$(ProjectDir)\bitcoin\src\secp256k1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration>false</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;USE_FIELD_10X26=1;USE_FIELD_INV_BUILTIN=1;USE_NUM_NONE=1;USE_SCALAR_8X32=1;USE_SCALAR_INV_BUILTIN=1;LEVELDB_PLATFORM_WINDOWS;_LIB</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\bitcoin\src\secp256k1\include;$(ProjectDir)\bitcoin\src\secp256k1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <LinkTimeCodeGeneration>false</LinkTimeCodeGeneration>
+    </Lib>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

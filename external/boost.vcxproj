@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E6F67299-7248-46E4-8379-AD0D91C2A4B6}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+    <ProjectName>boost</ProjectName>
+    <BaseIntermediateOutputPath>$(SolutionDir)\_int\$(ProjectName)</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>
+    </NMakeReBuildCommandLine>
+    <NMakeBuildCommandLine>REM ** Environment variables **
+
+SET ZLIB_SOURCE=$(ProjectDir)\zlib
+SET VS_UNICODE_OUTPUT=""
+
+
+REM ** Check if need rebuild **
+
+if exist "$(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost" exit
+
+if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\build.bat" echo "Please fetch submodules and try again" &amp; exit
+if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe" (cd $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine &amp; call build.bat msvc) 
+
+
+REM ** Settings **
+
+SET _LIBRARIES= --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread --with-test
+SET _PARAMS= runtime-link=static threading=multi link=static
+rem SET _PARAMS= runtime-link=shared threading=multi link=shared
+SET _FLAGS="/wd4800 /wd4244 /wd4996 /wd4273 /wd4702 /wd4251"
+SET _BUILD_DIR=$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\
+SET _STAGE_DIR=$(SolutionDir)\lib\$(Platform)\$(Configuration)
+
+
+REM ** Build **
+
+cd $(ProjectDir)$(MSBuildProjectName)
+if not exist "$(ProjectDir)$(MSBuildProjectName)\boost" $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc headers  --build-dir=%_BUILD_DIR%
+$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc %_PARAMS% variant=$(Configuration.ToLower()) address-model=$(PlatformArchitecture) --build-dir=%_BUILD_DIR% --stagedir=%_STAGE_DIR% %_LIBRARIES% stage cxxflags=%_FLAGS%
+
+
+REM ** Install **
+
+move /y $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib\libboost* $(SolutionDir)\lib\$(Platform)\$(Configuration)\ &gt; $(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost
+rd /s /q $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib
+
+rem if not exist "$(SolutionDir)packages\boost\build\native\include" (mkdir $(SolutionDir)packages\boost\build\native\include &amp; mklink /j $(SolutionDir)packages\boost\build\native\include\boost $(ProjectDir)$(MSBuildProjectName)\boost)
+rem if not exist "$(SolutionDir)packages\boost\build\native\lib\$(Platform)\$(Configuration)" mkdir $(SolutionDir)packages\boost\build\native\lib\$(Platform)\$(Configuration) &amp; move /Y $(SolutionDir)packages\boost\build\native\lib\*.* $(SolutionDir)packages\boost\build\native\lib\$(Platform)\$(Configuration)\
+</NMakeBuildCommandLine>
+    <NMakeAssemblySearchPath>
+    </NMakeAssemblySearchPath>
+    <ExecutablePath>$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+    <NMakeCleanCommandLine>rd /s /q $(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)
+del $(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost</NMakeCleanCommandLine>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)\lib\$(platform)\$(configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <NMakeOutput>
+    </NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN64;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeBuildCommandLine>REM ** Environment variables **
+
+SET ZLIB_SOURCE=$(ProjectDir)\zlib
+SET VS_UNICODE_OUTPUT=""
+
+
+REM ** Check if need rebuild **
+
+if exist "$(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost" exit
+
+if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\build.bat" echo "Please fetch submodules and try again" &amp; exit
+if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe" (cd $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine &amp; call build.bat msvc) 
+
+
+REM ** Settings **
+
+SET _LIBRARIES= --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread --with-test
+SET _PARAMS= runtime-link=static threading=multi link=static
+rem SET _PARAMS= runtime-link=shared threading=multi link=shared
+SET _FLAGS="/wd4800 /wd4244 /wd4996 /wd4273 /wd4702 /wd4251"
+SET _BUILD_DIR=$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\
+SET _STAGE_DIR=$(SolutionDir)\lib\$(Platform)\$(Configuration)
+
+
+REM ** Build **
+
+cd $(ProjectDir)$(MSBuildProjectName)
+if not exist "$(ProjectDir)$(MSBuildProjectName)\boost" $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc headers  --build-dir=%_BUILD_DIR%
+$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc %_PARAMS% variant=$(Configuration.ToLower()) address-model=$(PlatformArchitecture) --build-dir=%_BUILD_DIR% --stagedir=%_STAGE_DIR% %_LIBRARIES% stage cxxflags=%_FLAGS%
+
+
+REM ** Install **
+
+move /y $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib\libboost* $(SolutionDir)\lib\$(Platform)\$(Configuration)\ &gt; $(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost
+rd /s /q $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib
+
+rem if not exist "$(SolutionDir)packages\boost\build\native\include" (mkdir $(SolutionDir)packages\boost\build\native\include &amp; mklink /j $(SolutionDir)packages\boost\build\native\include\boost $(ProjectDir)$(MSBuildProjectName)\boost)
+rem if not exist "$(SolutionDir)packages\boost\build\native\lib\$(Platform)\$(Configuration)" mkdir $(SolutionDir)packages\boost\build\native\lib\$(Platform)\$(Configuration) &amp; move /Y $(SolutionDir)packages\boost\build\native\lib\*.* $(SolutionDir)packages\boost\build\native\lib\$(Platform)\$(Configuration)\
+</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>
+    </NMakeReBuildCommandLine>
+    <NMakeCleanCommandLine>rd /s /q $(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)
+del $(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost</NMakeCleanCommandLine>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)\lib\$(platform)\$(configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>
+    </NMakeReBuildCommandLine>
+    <NMakeBuildCommandLine>REM ** Environment variables **
+
+SET ZLIB_SOURCE=$(ProjectDir)\zlib
+SET VS_UNICODE_OUTPUT=""
+
+
+REM ** Check if need rebuild **
+
+if exist "$(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost" exit
+
+if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\build.bat" echo "Please fetch submodules and try again" &amp; exit
+if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe" (cd $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine &amp; call build.bat msvc) 
+
+
+REM ** Settings **
+
+SET _LIBRARIES= --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread --with-test
+SET _PARAMS= runtime-link=static threading=multi link=static
+rem SET _PARAMS= runtime-link=shared threading=multi link=shared
+SET _FLAGS="/wd4800 /wd4244 /wd4996 /wd4273 /wd4702 /wd4251"
+SET _BUILD_DIR=$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\
+SET _STAGE_DIR=$(SolutionDir)\lib\$(Platform)\$(Configuration)
+
+
+REM ** Build **
+
+cd $(ProjectDir)$(MSBuildProjectName)
+if not exist "$(ProjectDir)$(MSBuildProjectName)\boost" $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc headers  --build-dir=%_BUILD_DIR%
+$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc %_PARAMS% variant=$(Configuration.ToLower()) address-model=$(PlatformArchitecture) --build-dir=%_BUILD_DIR% --stagedir=%_STAGE_DIR% %_LIBRARIES% stage cxxflags=%_FLAGS%
+
+
+REM ** Install **
+
+move /y $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib\libboost* $(SolutionDir)\lib\$(Platform)\$(Configuration)\ &gt; $(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost
+rd /s /q $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib
+
+rem if not exist "$(SolutionDir)packages\boost\build\native\include" (mkdir $(SolutionDir)packages\boost\build\native\include &amp; mklink /j $(SolutionDir)packages\boost\build\native\include\boost $(ProjectDir)$(MSBuildProjectName)\boost)
+rem if not exist "$(SolutionDir)packages\boost\build\native\lib\$(Platform)\$(Configuration)" mkdir $(SolutionDir)packages\boost\build\native\lib\$(Platform)\$(Configuration) &amp; move /Y $(SolutionDir)packages\boost\build\native\lib\*.* $(SolutionDir)packages\boost\build\native\lib\$(Platform)\$(Configuration)\
+</NMakeBuildCommandLine>
+    <ExecutablePath>$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
+    <NMakeCleanCommandLine>rd /s /q $(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)
+del $(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost</NMakeCleanCommandLine>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)\lib\$(platform)\$(configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <NMakeOutput>
+    </NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN64;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeReBuildCommandLine>
+    </NMakeReBuildCommandLine>
+    <NMakeBuildCommandLine>REM ** Environment variables **
+
+SET ZLIB_SOURCE=$(ProjectDir)\zlib
+SET VS_UNICODE_OUTPUT=""
+
+
+REM ** Check if need rebuild **
+
+if exist "$(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost" exit
+
+if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\build.bat" echo "Please fetch submodules and try again" &amp; exit
+if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe" (cd $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine &amp; call build.bat msvc) 
+
+
+REM ** Settings **
+
+SET _LIBRARIES= --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread --with-test
+SET _PARAMS= runtime-link=static threading=multi link=static
+rem SET _PARAMS= runtime-link=shared threading=multi link=shared
+SET _FLAGS="/wd4800 /wd4244 /wd4996 /wd4273 /wd4702 /wd4251"
+SET _BUILD_DIR=$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\
+SET _STAGE_DIR=$(SolutionDir)\lib\$(Platform)\$(Configuration)
+
+
+REM ** Build **
+
+cd $(ProjectDir)$(MSBuildProjectName)
+if not exist "$(ProjectDir)$(MSBuildProjectName)\boost" $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc headers  --build-dir=%_BUILD_DIR%
+$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc %_PARAMS% variant=$(Configuration.ToLower()) address-model=$(PlatformArchitecture) --build-dir=%_BUILD_DIR% --stagedir=%_STAGE_DIR% %_LIBRARIES% stage cxxflags=%_FLAGS%
+
+
+REM ** Install **
+
+move /y $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib\libboost* $(SolutionDir)\lib\$(Platform)\$(Configuration)\ &gt; $(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost
+rd /s /q $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib
+
+rem if not exist "$(SolutionDir)packages\boost\build\native\include" (mkdir $(SolutionDir)packages\boost\build\native\include &amp; mklink /j $(SolutionDir)packages\boost\build\native\include\boost $(ProjectDir)$(MSBuildProjectName)\boost)
+rem if not exist "$(SolutionDir)packages\boost\build\native\lib\$(Platform)\$(Configuration)" mkdir $(SolutionDir)packages\boost\build\native\lib\$(Platform)\$(Configuration) &amp; move /Y $(SolutionDir)packages\boost\build\native\lib\*.* $(SolutionDir)packages\boost\build\native\lib\$(Platform)\$(Configuration)\
+</NMakeBuildCommandLine>
+    <NMakeCleanCommandLine>rd /s /q $(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)
+del $(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost</NMakeCleanCommandLine>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)\lib\$(platform)\$(configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

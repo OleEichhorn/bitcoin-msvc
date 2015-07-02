@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\addrman.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\alert.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\amount.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\arith_uint256.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\base58.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\bloom.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\chain.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\chainparams.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\chainparamsbase.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\chainparamsseeds.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\checkpoints.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\checkqueue.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\clientversion.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\coincontrol.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\coins.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\compat.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\compat\byteswap.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\compat\endian.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\compat\sanity.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\compressor.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\core_io.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\crypto\common.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\crypto\hmac_sha256.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\crypto\hmac_sha512.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\crypto\ripemd160.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\crypto\sha1.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\crypto\sha256.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\crypto\sha512.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\eccryptoverify.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\ecwrapper.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\hash.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\init.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\json\json_spirit.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\json\json_spirit_error_position.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\json\json_spirit_reader.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\json\json_spirit_reader_template.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\json\json_spirit_stream_reader.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\json\json_spirit_utils.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\json\json_spirit_value.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\json\json_spirit_writer.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\json\json_spirit_writer_template.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\key.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\keystore.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\leveldbwrapper.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\limitedmap.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\main.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\merkleblock.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\miner.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\mruset.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\net.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\netbase.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\noui.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\policy\fees.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\pow.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\primitives\block.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\primitives\transaction.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\protocol.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\pubkey.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\random.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\rpcclient.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\rpcprotocol.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\rpcserver.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\scheduler.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\script\bitcoinconsensus.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\script\interpreter.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\script\script.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\script\script_error.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\script\sigcache.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\script\sign.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\script\standard.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\serialize.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\streams.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\support\allocators\secure.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\support\allocators\zeroafterfree.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\support\cleanse.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\support\pagelocker.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\sync.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\threadsafety.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\timedata.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\tinyformat.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\txdb.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\txmempool.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\uint256.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\ui_interface.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\undo.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\univalue\univalue.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\univalue\univalue_escapes.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\util.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\utilmoneystr.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\utilstrencodings.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\utiltime.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\validationinterface.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\version.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\wallet\crypter.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\wallet\db.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\wallet\wallet.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\wallet\walletdb.h" />
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\wallet\wallet_ismine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\addrman.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\alert.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\amount.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\arith_uint256.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\base58.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\bloom.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\chain.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\chainparams.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\chainparamsbase.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\checkpoints.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\clientversion.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\coins.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\compat\glibcxx_sanity.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\compat\glibc_sanity.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\compat\strnlen.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\compressor.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\core_read.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\core_write.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\crypto\hmac_sha256.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\crypto\hmac_sha512.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\crypto\ripemd160.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\crypto\sha1.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\crypto\sha256.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\crypto\sha512.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\eccryptoverify.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\ecwrapper.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\hash.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\init.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\json\json_spirit_reader.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\json\json_spirit_value.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\json\json_spirit_writer.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\key.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\keystore.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\leveldbwrapper.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\main.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\merkleblock.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\miner.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\net.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\netbase.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\noui.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\policy\fees.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\pow.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\primitives\block.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\primitives\transaction.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\protocol.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\pubkey.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\random.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\rest.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\rpcblockchain.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\rpcclient.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\rpcmining.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\rpcmisc.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\rpcnet.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\rpcprotocol.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\rpcrawtransaction.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\rpcserver.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\scheduler.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\script\bitcoinconsensus.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\script\interpreter.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\script\script.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\script\script_error.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\script\sigcache.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\script\sign.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\script\standard.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\support\cleanse.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\support\pagelocker.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\sync.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\timedata.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\txdb.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\txmempool.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\uint256.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\univalue\gen.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\univalue\univalue.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\univalue\univalue_read.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\univalue\univalue_write.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\util.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\utilmoneystr.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\utilstrencodings.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\utiltime.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\validationinterface.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\wallet\crypter.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\wallet\db.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\wallet\rpcdump.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\wallet\rpcwallet.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\wallet\wallet.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\wallet\walletdb.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\wallet\wallet_ismine.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3703B138-B8DA-460E-9DD1-41BDC7588E80}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libcommon</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\lib\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>MINIUPNP_STATICLIB;STATICLIB;USE_UPNP;_CRT_SECURE_NO_WARNINGS;UNICODE;WIN32;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;HAVE_WORKING_BOOST_SLEEP_FOR;NOMINMAX;USE_LEVELDB;USE_IPV6=1;BOOST_SPIRIT_THREADSAFE;__STDC_FORMAT_MACROS;ENABLE_WALLET=1;__func__=__FUNCTION__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\external;$(ProjectDir)\..\external\boost;$(ProjectDir)\..\external\openssl\include;$(ProjectDir)\..\external\berkeleydb\build_windows;$(ProjectDir)\bitcoin\src\leveldb\helpers\memenv;$(ProjectDir)\bitcoin\src\leveldb\helpers;$(ProjectDir)\bitcoin\src\leveldb\include;$(ProjectDir)\bitcoin\src\;$(ProjectDir)\bitcoin\src\secp256k1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderFile />
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>MINIUPNP_STATICLIB;STATICLIB;USE_UPNP;_CRT_SECURE_NO_WARNINGS;UNICODE;WIN32;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;HAVE_WORKING_BOOST_SLEEP_FOR;NOMINMAX;USE_LEVELDB;USE_IPV6=1;BOOST_SPIRIT_THREADSAFE;__STDC_FORMAT_MACROS;ENABLE_WALLET=1;__func__=__FUNCTION__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\external;$(ProjectDir)\..\external\boost;$(ProjectDir)\..\external\openssl\include;$(ProjectDir)\..\external\berkeleydb\build_windows;$(ProjectDir)\bitcoin\src\leveldb\helpers\memenv;$(ProjectDir)\bitcoin\src\leveldb\helpers;$(ProjectDir)\bitcoin\src\leveldb\include;$(ProjectDir)\bitcoin\src\;$(ProjectDir)\bitcoin\src\secp256k1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeaderFile>
+      </PrecompiledHeaderFile>
+      <CompileAs>Default</CompileAs>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>MINIUPNP_STATICLIB;STATICLIB;USE_UPNP;_CRT_SECURE_NO_WARNINGS;UNICODE;WIN32;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;HAVE_WORKING_BOOST_SLEEP_FOR;NOMINMAX;USE_LEVELDB;USE_IPV6=1;BOOST_SPIRIT_THREADSAFE;__STDC_FORMAT_MACROS;ENABLE_WALLET=1;__func__=__FUNCTION__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\external;$(ProjectDir)\..\external\boost;$(ProjectDir)\..\external\openssl\include;$(ProjectDir)\..\external\berkeleydb\build_windows;$(ProjectDir)\bitcoin\src\leveldb\helpers\memenv;$(ProjectDir)\bitcoin\src\leveldb\helpers;$(ProjectDir)\bitcoin\src\leveldb\include;$(ProjectDir)\bitcoin\src\;$(ProjectDir)\bitcoin\src\secp256k1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>MINIUPNP_STATICLIB;STATICLIB;USE_UPNP;_CRT_SECURE_NO_WARNINGS;UNICODE;WIN32;_SCL_SECURE_NO_WARNINGS;_WIN32_WINNT=0x0501;HAVE_WORKING_BOOST_SLEEP_FOR;NOMINMAX;USE_LEVELDB;USE_IPV6=1;BOOST_SPIRIT_THREADSAFE;__STDC_FORMAT_MACROS;ENABLE_WALLET=1;__func__=__FUNCTION__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\..\external;$(ProjectDir)\..\external\boost;$(ProjectDir)\..\external\openssl\include;$(ProjectDir)\..\external\berkeleydb\build_windows;$(ProjectDir)\bitcoin\src\leveldb\helpers\memenv;$(ProjectDir)\bitcoin\src\leveldb\helpers;$(ProjectDir)\bitcoin\src\leveldb\include;$(ProjectDir)\bitcoin\src\;$(ProjectDir)\bitcoin\src\secp256k1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

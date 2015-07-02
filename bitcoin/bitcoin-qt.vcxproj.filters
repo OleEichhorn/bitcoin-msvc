@@ -1,0 +1,1143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts;xlf</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Media Files">
+      <UniqueIdentifier>{9f442569-9fb0-4992-b495-9b391edacda7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="build\moc_addressbookpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_addresstablemodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_askpassphrasedialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_bitcoinaddressvalidator.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_bitcoinamountfield.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_bitcoingui.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_bitcoinunits.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_clientmodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_coincontroldialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_coincontroltreewidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_csvmodelwriter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_editaddressdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_guiutil.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_intro.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_macdockiconhandler.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_macnotificationhandler.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_notificator.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_openuridialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_optionsdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_optionsmodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_overviewpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_paymentserver.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_peertablemodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_qvalidatedlineedit.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_qvaluecombobox.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_receivecoinsdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_receiverequestdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_recentrequeststablemodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_rpcconsole.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_sendcoinsdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_sendcoinsentry.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_signverifymessagedialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_splashscreen.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_trafficgraphwidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_transactiondesc.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_transactiondescdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_transactionfilterproxy.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_transactiontablemodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_transactionview.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_utilitydialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_walletframe.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_walletmodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\moc_walletview.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\paymentrequest.pb.cc">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\qrc_bitcoin.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\qrc_bitcoin_locale.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\addressbookpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\addresstablemodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\askpassphrasedialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoin.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoinaddressvalidator.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoinamountfield.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoingui.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoinstrings.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoinunits.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\clientmodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\coincontroldialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\coincontroltreewidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\csvmodelwriter.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\editaddressdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\guiutil.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\intro.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\networkstyle.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\notificator.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\openuridialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\optionsdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\optionsmodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\overviewpage.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\paymentrequestplus.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\paymentserver.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\peertablemodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\qvalidatedlineedit.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\qvaluecombobox.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\receivecoinsdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\receiverequestdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\recentrequeststablemodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\rpcconsole.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\scicon.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\sendcoinsdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\sendcoinsentry.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\signverifymessagedialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\splashscreen.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\trafficgraphwidget.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\transactiondesc.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\transactiondescdialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\transactionfilterproxy.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\transactionrecord.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\transactiontablemodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\transactionview.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\utilitydialog.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\walletframe.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\walletmodel.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\walletmodeltransaction.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\walletview.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\winshutdownmonitor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="build\bitcoin.moc">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="build\bitcoinamountfield.moc">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="build\intro.moc">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="build\overviewpage.moc">
+      <Filter>Generated Files</Filter>
+    </None>
+    <None Include="build\rpcconsole.moc">
+      <Filter>Generated Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\bitcoin.qrc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\bitcoin_locale.qrc">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\addressbookpage.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\askpassphrasedialog.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\coincontroldialog.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\editaddressdialog.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\helpmessagedialog.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\intro.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\openuridialog.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\optionsdialog.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\overviewpage.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\receivecoinsdialog.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\receiverequestdialog.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\rpcconsole.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\sendcoinsdialog.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\sendcoinsentry.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\signverifymessagedialog.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\forms\transactiondescdialog.ui">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_ach.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_af_ZA.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_ar.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_be_BY.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_bg.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_bs.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_ca%40valencia.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_ca.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_ca_ES.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_cmn.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_cs.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_cy.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_da.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_de.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_el_GR.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_en.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_eo.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_es.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_es_CL.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_es_DO.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_es_MX.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_es_UY.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_et.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_eu_ES.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_fa.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_fa_IR.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_fi.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_fr.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_fr_CA.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_gl.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_gu_IN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_he.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_hi_IN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_hr.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_hu.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_id_ID.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_it.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_ja.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_ka.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_kk_KZ.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_ko_KR.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_ky.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_la.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_lt.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_lv_LV.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_mn.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_ms_MY.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_nb.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_nl.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_pam.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_pl.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_pt_BR.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_pt_PT.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_ro_RO.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_ru.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_sah.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_sk.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_sl_SI.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_sq.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_sr.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_sv.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_th_TH.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_tr.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_uk.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_ur_PK.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_uz%40Cyrl.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_vi.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_vi_VN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_zh_CN.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_zh_HK.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\locale\bitcoin_zh_TW.ts">
+      <Filter>Translation Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\icons\bitcoin.icns">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\bitcoin.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\clock_0.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\clock_1.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\clock_2.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\clock_3.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\clock_4.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\connect-0.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\connect-1.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\connect-2.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\connect-3.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\movies\makespinner.sh">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\mine.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\qt.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\tx_in.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\tx_inout.svg">
+      <Filter>Media Files</Filter>
+    </None>
+    <None Include="$(ProjectDir)\bitcoin\src\qt\res\src\verify.svg">
+      <Filter>Media Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="build\ui_addressbookpage.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_askpassphrasedialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_coincontroldialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_editaddressdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_helpmessagedialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_intro.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_openuridialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_optionsdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_overviewpage.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_receivecoinsdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_receiverequestdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_rpcconsole.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_sendcoinsdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_sendcoinsentry.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_signverifymessagedialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\ui_transactiondescdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="build\paymentrequest.pb.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\addressbookpage.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\addresstablemodel.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\askpassphrasedialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\bitcoinaddressvalidator.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\bitcoinamountfield.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\bitcoingui.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\bitcoinunits.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\clientmodel.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\coincontroldialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\coincontroltreewidget.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\csvmodelwriter.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\editaddressdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\guiconstants.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\guiutil.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\intro.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\macdockiconhandler.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\macnotificationhandler.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\networkstyle.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\notificator.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\openuridialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\optionsdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\optionsmodel.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\overviewpage.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\paymentrequestplus.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\paymentserver.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\peertablemodel.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\qvalidatedlineedit.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\qvaluecombobox.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\receivecoinsdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\receiverequestdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\recentrequeststablemodel.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\rpcconsole.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\scicon.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\sendcoinsdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\sendcoinsentry.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\signverifymessagedialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\splashscreen.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\trafficgraphwidget.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\transactiondesc.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\transactiondescdialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\transactionfilterproxy.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\transactionrecord.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\transactiontablemodel.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\transactionview.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\utilitydialog.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\walletframe.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\walletmodel.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\walletmodeltransaction.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\walletview.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="$(ProjectDir)\bitcoin\src\qt\winshutdownmonitor.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\about.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\about_qt.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\add.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\address-book.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\bitcoin.ico">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\bitcoin.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\clock1.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\clock2.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\clock3.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\clock4.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\clock5.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\configure.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\connect0.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\connect1.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\connect2.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\connect3.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\connect4.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\debugwindow.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\edit.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\editcopy.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\editpaste.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\export.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\eye.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\eye_minus.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\eye_plus.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\filesave.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\history.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\info.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\key.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\lock_closed.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\lock_open.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\open.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\overview.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\quit.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\receive.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\remove.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\send.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\spinner.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-000.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-001.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-002.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-003.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-004.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-005.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-006.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-007.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-008.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-009.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-010.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-011.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-012.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-013.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-014.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-015.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-016.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-017.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-018.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-019.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-020.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-021.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-022.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-023.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-024.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-025.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-026.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-027.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-028.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-029.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-030.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-031.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-032.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-033.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-034.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\movies\spinner-035.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\synced.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\transaction_conflicted.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\transaction0.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\transaction2.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\tx_inout.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\tx_input.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\tx_mined.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\tx_output.png">
+      <Filter>Media Files</Filter>
+    </Image>
+    <Image Include="$(ProjectDir)\bitcoin\src\qt\res\icons\verify.png">
+      <Filter>Media Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(ProjectDir)\bitcoin\src\qt\res\bitcoin-qt-res.rc">
+      <Filter>Media Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

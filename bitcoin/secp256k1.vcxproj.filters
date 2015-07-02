@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{b89e0a41-89eb-465d-ac51-5f3e90ce72ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{89ec044a-b075-4d01-a1ca-c1c9755aa07f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\secp256k1.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\include\secp256k1.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\ecdsa.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\ecdsa_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\eckey.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\eckey_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\ecmult.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\ecmult_gen.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\ecmult_gen_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\ecmult_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\field.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\field_10x26.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\field_10x26_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\field_5x52.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\field_5x52_asm_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\field_5x52_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\field_5x52_int128_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\field_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\group.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\group_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\hash.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\hash_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\num.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\num_gmp.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\num_gmp_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\num_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\scalar.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\scalar_4x64.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\scalar_4x64_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\scalar_8x32.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\scalar_8x32_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\scalar_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\testrand.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\testrand_impl.h" />
+    <ClInclude Include="$(ProjectDir)..\bitcoin\src\secp256k1\src\util.h" />
+  </ItemGroup>
+</Project>

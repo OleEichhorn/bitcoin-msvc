@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{72CBD41C-43E4-4A2B-91E1-D306D6A74229}</ProjectGuid>
+    <ProjectName>berkeleydb</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(platform)\$(configuration)\</IntDir>
+    <OutDir>$(SolutionDir)\lib\$(platform)\$(configuration)\</OutDir>
+    <IncludePath>$(ProjectDir)$(MSBuildProjectName);$(ProjectDir)$(MSBuildProjectName)\build_windows;$(IncludePath)</IncludePath>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <TargetName>libdb48sd</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)\lib\$(platform)\$(configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(platform)\$(configuration)\</IntDir>
+    <IncludePath>$(ProjectDir)$(MSBuildProjectName);$(ProjectDir)$(MSBuildProjectName)\build_windows;$(IncludePath)</IncludePath>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <TargetName>libdb48s</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(platform)\$(configuration)\</IntDir>
+    <OutDir>$(SolutionDir)\lib\$(platform)\$(configuration)\</OutDir>
+    <IncludePath>$(ProjectDir)$(MSBuildProjectName);$(ProjectDir)$(MSBuildProjectName)\build_windows;$(IncludePath)</IncludePath>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <TargetName>libdb48sd</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)\lib\$(platform)\$(configuration)\</OutDir>
+    <IntDir>$(SolutionDir)\_int\$(ProjectName)\$(platform)\$(configuration)\</IntDir>
+    <SourcePath>$(SourcePath)</SourcePath>
+    <TargetName>libdb48s</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+      <AdditionalIncludeDirectories>$(ProjectDir)$(MSBuildProjectName)/build_windows/;$(ProjectDir)$(MSBuildProjectName)/;$(ProjectDir)$(MSBuildProjectName)/dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDOWS;_UNICODE;UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;WIN32;_DEBUG;DIAGNOSTIC</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <AssemblerListingLocation>$(IntDir)$(MSBuildProjectName)/</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)$(MSBuildProjectName)/</ObjectFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4996;</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ClCompile Condition="'$(ConfigurationType)'=='StaticLibrary'">
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Midl Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>$(OUTDIR)db_dll.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+    </Midl>
+    <ResourceCompile Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OUTDIR)db_dll.bsc</OutputFile>
+    </Bscmake>
+    <Link Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OUTDIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions> /FIXED:NO  /export:__db_assert</AdditionalOptions>
+      <BaseAddress>0x13000000</BaseAddress>
+      <AdditionalDependencies>ws2_32.lib;Advapi32.lib;</AdditionalDependencies>
+      <ModuleDefinitionFile>$(ProjectDir)$(MSBuildProjectName)\build_windows\libdb.def</ModuleDefinitionFile>
+    </Link>
+    <Lib Condition="'$(ConfigurationType)'=='StaticLibrary'">
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(ProjectDir)$(MSBuildProjectName)/build_windows/;$(ProjectDir)$(MSBuildProjectName)/;$(ProjectDir)$(MSBuildProjectName)/dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDOWS;_UNICODE;UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;WIN32;NDEBUG</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AssemblerListingLocation>$(IntDir)$(MSBuildProjectName)/</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)$(MSBuildProjectName)/</ObjectFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4996;</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <ClCompile Condition="'$(ConfigurationType)'=='StaticLibrary'">
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Midl Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>$(OUTDIR)db_dll.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+    </Midl>
+    <ResourceCompile Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OUTDIR)db_dll.bsc</OutputFile>
+    </Bscmake>
+    <Link Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OUTDIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions> /FIXED:NO  </AdditionalOptions>
+      <BaseAddress>0x13000000</BaseAddress>
+      <AdditionalDependencies>ws2_32.lib;Advapi32.lib;</AdditionalDependencies>
+      <ModuleDefinitionFile>$(ProjectDir)$(MSBuildProjectName)\build_windows\libdb.def</ModuleDefinitionFile>
+    </Link>
+    <Lib Condition="'$(ConfigurationType)'=='StaticLibrary'">
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+      <AdditionalIncludeDirectories>$(ProjectDir)$(MSBuildProjectName)/build_windows/;$(ProjectDir)$(MSBuildProjectName)/;$(ProjectDir)$(MSBuildProjectName)/dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDOWS;_UNICODE;UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WIN64;_DEBUG;DIAGNOSTIC</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <AssemblerListingLocation>$(IntDir)$(MSBuildProjectName)/</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)$(MSBuildProjectName)/</ObjectFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4996;</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <ClCompile Condition="'$(ConfigurationType)'=='StaticLibrary'">
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Midl Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>$(OUTDIR)db_dll.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+    </Midl>
+    <ResourceCompile Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OUTDIR)db_dll.bsc</OutputFile>
+    </Bscmake>
+    <Link Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OUTDIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions> /FIXED:NO  /export:__db_assert</AdditionalOptions>
+      <BaseAddress>0x13000000</BaseAddress>
+      <AdditionalDependencies>ws2_32.lib;Advapi32.lib;</AdditionalDependencies>
+      <ModuleDefinitionFile>$(ProjectDir)$(MSBuildProjectName)\build_windows\libdb.def</ModuleDefinitionFile>
+    </Link>
+    <Lib Condition="'$(ConfigurationType)'=='StaticLibrary'">
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <MinimalRebuild>true</MinimalRebuild>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(ProjectDir)$(MSBuildProjectName)/build_windows/;$(ProjectDir)$(MSBuildProjectName)/;$(ProjectDir)$(MSBuildProjectName)/dbinc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDOWS;_UNICODE;UNICODE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_WIN64;NDEBUG</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <AssemblerListingLocation>$(IntDir)$(MSBuildProjectName)/</AssemblerListingLocation>
+      <ObjectFileName>$(IntDir)$(MSBuildProjectName)/</ObjectFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+      <DisableSpecificWarnings>4996;</DisableSpecificWarnings>
+    </ClCompile>
+    <ClCompile Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <ClCompile Condition="'$(ConfigurationType)'=='StaticLibrary'">
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Midl Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>$(OUTDIR)db_dll.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <RedirectOutputAndErrors>NUL</RedirectOutputAndErrors>
+    </Midl>
+    <ResourceCompile Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(OUTDIR)db_dll.bsc</OutputFile>
+    </Bscmake>
+    <Link Condition="'$(ConfigurationType)'=='DynamicLibrary'">
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <AdditionalLibraryDirectories>$(OUTDIR);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions> /FIXED:NO  /export:__db_assert</AdditionalOptions>
+      <BaseAddress>0x13000000</BaseAddress>
+      <AdditionalDependencies>ws2_32.lib;Advapi32.lib;</AdditionalDependencies>
+      <ModuleDefinitionFile>$(ProjectDir)$(MSBuildProjectName)\build_windows\libdb.def</ModuleDefinitionFile>
+    </Link>
+    <Lib Condition="'$(ConfigurationType)'=='StaticLibrary'">
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Lib>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\btree_auto.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_compact.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_compare.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_compress.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_conv.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_curadj.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_cursor.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_delete.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_method.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_open.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_put.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_rec.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_reclaim.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_recno.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_rsearch.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_search.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_split.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_upgrade.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\btree\bt_verify.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\clib\strsep.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\crypto_stub.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\dbt.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\db_byteorder.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\db_compint.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\db_err.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\db_getlong.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\db_idspace.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\db_log2.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\db_shash.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\mkpath.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\openflags.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\os_method.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\util_cache.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\util_log.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\util_sig.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\common\zerofill.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\cxx\cxx_db.cpp" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\cxx\cxx_dbc.cpp" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\cxx\cxx_dbt.cpp" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\cxx\cxx_env.cpp" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\cxx\cxx_except.cpp" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\cxx\cxx_lock.cpp" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\cxx\cxx_logc.cpp" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\cxx\cxx_mpool.cpp" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\cxx\cxx_multi.cpp" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\cxx\cxx_seq.cpp" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\cxx\cxx_txn.cpp" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\dbm\dbm.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\dbreg\dbreg.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\dbreg\dbreg_auto.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\dbreg\dbreg_rec.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\dbreg\dbreg_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\dbreg\dbreg_util.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\crdel_auto.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\crdel_rec.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_am.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_auto.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_cam.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_cds.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_conv.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_dispatch.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_dup.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_iface.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_join.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_meta.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_method.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_open.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_overflow.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_ovfl_vrfy.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_pr.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_rec.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_reclaim.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_remove.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_rename.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_ret.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_setid.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_setlsn.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_sort_multiple.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_stati.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_truncate.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_upg.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_upg_opd.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_vrfy.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\db_vrfyutil.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\db\partition.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\env\env_alloc.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\env\env_config.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\env\env_failchk.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\env\env_file.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\env\env_globals.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\env\env_method.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\env\env_name.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\env\env_open.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\env\env_recover.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\env\env_region.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\env\env_register.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\env\env_sig.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\env\env_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\fileops\fileops_auto.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\fileops\fop_basic.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\fileops\fop_rec.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\fileops\fop_util.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash_auto.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash_conv.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash_dup.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash_func.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash_meta.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash_method.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash_open.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash_page.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash_rec.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash_reclaim.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash_upgrade.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hash\hash_verify.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hmac\hmac.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hmac\sha1.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\hsearch\hsearch.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\lock\lock.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\lock\lock_deadlock.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\lock\lock_failchk.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\lock\lock_id.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\lock\lock_list.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\lock\lock_method.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\lock\lock_region.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\lock\lock_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\lock\lock_timer.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\lock\lock_util.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\log\log.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\log\log_archive.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\log\log_compare.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\log\log_debug.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\log\log_get.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\log\log_method.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\log\log_put.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\log\log_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_alloc.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_bh.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_fget.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_fmethod.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_fopen.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_fput.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_fset.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_method.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_mvcc.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_region.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_register.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_resize.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_sync.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mp\mp_trickle.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mutex\mut_alloc.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mutex\mut_failchk.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mutex\mut_method.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mutex\mut_region.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mutex\mut_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\mutex\mut_win32.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os\os_abort.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os\os_addrinfo.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os\os_alloc.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os\os_ctime.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os\os_pid.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os\os_root.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os\os_rpath.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os\os_stack.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os\os_tmpdir.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os\os_uid.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_abs.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_clock.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_config.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_cpu.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_dir.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_errno.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_fid.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_flock.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_fsync.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_getenv.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_handle.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_map.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_mkdir.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_open.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_rename.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_rw.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_seek.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_truncate.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_unlink.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\os_windows\os_yield.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\qam\qam.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\qam\qam_auto.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\qam\qam_conv.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\qam\qam_files.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\qam\qam_method.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\qam\qam_open.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\qam\qam_rec.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\qam\qam_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\qam\qam_upgrade.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\qam\qam_verify.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\repmgr\repmgr_auto.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\repmgr\repmgr_elect.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\repmgr\repmgr_method.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\repmgr\repmgr_msg.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\repmgr\repmgr_net.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\repmgr\repmgr_queue.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\repmgr\repmgr_sel.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\repmgr\repmgr_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\repmgr\repmgr_util.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\repmgr\repmgr_windows.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\rep\rep_auto.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\rep\rep_backup.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\rep\rep_elect.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\rep\rep_lease.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\rep\rep_log.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\rep\rep_method.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\rep\rep_record.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\rep\rep_region.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\rep\rep_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\rep\rep_util.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\rep\rep_verify.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\sequence\sequence.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\sequence\seq_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\txn\txn.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\txn\txn_auto.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\txn\txn_chkpt.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\txn\txn_failchk.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\txn\txn_method.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\txn\txn_rec.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\txn\txn_recover.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\txn\txn_region.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\txn\txn_stat.c" />
+    <ClCompile Include="$(ProjectDir)$(MSBuildProjectName)\txn\txn_util.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="$(ProjectDir)$(MSBuildProjectName)\build_windows\libdb.rc">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">_DEBUG;$(NoInherit));%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">_DEBUG;$(NoInherit));%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NDEBUG;$(NoInherit));%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NDEBUG;$(NoInherit));%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
