@@ -3,6 +3,7 @@ Projects and procedures to build Bitcoin Core with MS Visual Studio
 
 There are three parts to this readme.  The first part is a rant.  Please feel free to skip :)  The second part is a cookbook for building Bitcoin Core with Microsoft Visual Studio 2013.  This Git repository includes the project files you'll need to do this.  The third part talks about initializing the blockchain.
 
+
 rant
 ====================
 
@@ -111,6 +112,8 @@ This directory structure is important, because there are a lot of relative paths
 
 If you've cloned this repo you will have the start of the directory structure, and the MSVC solution and project files.  Now it's time to get all the source code from everywhere.
 
+### getting the source ###
+
 Clone the Bitcoin Core repo https://github.com/bitcoin/bitcoin.git to:
 	`<path>\bitcoin`
 	You might want to name it per its current version, and create a link from "bitcoin" to the current version.  That's what I did.  For example, if the current version is 0.10.2, you could name the directory `bitcoin-0.10.2` and then `>mklink /j bitcoin bitcoin-0.10.2`
@@ -192,6 +195,7 @@ If you don't already have Perl, visit http://www.perl.org to download and instal
 
 If you don't already have Python, visit http://www.python.org to download and install it.  It can go anywhere but the default is `c:\python27` for v2.7.  It will update your PATH to include this directory.  NB I used v2.7.10 for x64.
 
+### building daemon and command line tools ###
 
 Okay!  Let's build all the external libraries.  Launch VS 2013, open the `<path>\external\bitcoinExternal.sln` solution, and build all of the external libraries.  Each one has a separate project in this solution.  You can build them each for two platforms, win32 and x64, and two configurations, Debug and Release.  If all went well, this will all work.  The diciest parts are the shell scripts for Boost and OpenSLL.  Good luck!
 
@@ -201,6 +205,8 @@ Yay, we're making progress.  Now let's make Bitcoin Core.
 From within VS 2013, load the `<path>\bitcoin\bitcoin.sln` solution.  This has a number of projects, including four for each of the executables.  At this point go ahead and build **bitcoin-cli**, **bitcoind**, and **bitcoin-tx**.  As with the external libraries you can build each one for each of the two platforms and configurations.  Hold off on **bitcoin-qt** for now.  This should work, and you now have a working version of **bitcoind**, and you can talk to it with **bitcoin-cli** and **bitcoin-tx**.  Yay.  
 
 It's possible this is all you wanted, because you want to run a "full node" on a server; if so, you'd done!  Congratulations and take the rest of this readme off.  However if you want the Bitcoin Core GUI, then ... here we go.
+
+### getting and installing Qt for GUI ###
 
 Download the Qt source http://download.qt.io/official_releases/qt and unzip it to:
 	`<path>\external\qt`
@@ -218,10 +224,9 @@ Download the Qt source http://download.qt.io/official_releases/qt and unzip it t
 Okay, now launch a Visual Studio 2013 x64 shell.  This can be done from the Visual Studio Tools folder in the start menu.  Now:
 
 	cd <path>\external\qt
-	configure –prefix %CD%\qtbase –static –developer-build –opensource -openssl 
-		-opengl desktop -nomake tests –nomake examples –platform win32-msvc2013
+	configure -prefix %CD%\qtbase -static -developer-build -opensource -openssl -opengl desktop -nomake tests -nomake examples -platform win32-msvc2013
 	nmake module-qtbase module-qttools
-	(this takes a looong time …)
+	(this takes a looong time ...)
 
 Congratulations, you've made 64-bit Qt.  After make completes...
 
@@ -237,10 +242,9 @@ Now, if you also want to make 32-bit Qt, you can do so, by doing the following..
 Launch a Visual Studio 2013 x86 shell.  Again, from the Visual Studio Tools folder.  Then:
 
 	cd <path>\external\qt
-	configure –prefix %CD%\qtbase –static –developer-build –opensource -openssl 
-		-opengl desktop -nomake tests –nomake examples –platform win32-msvc2013
+	configure -prefix %CD%\qtbase -static -developer-build -opensource -openssl -opengl desktop -nomake tests -nomake examples -platform win32-msvc2013
 	nmake module-qtbase module-qttools
-	(this takes another looong time …)
+	(this takes another looong time ...)
 
 Congratulations, you've made 32-bit Qt.  After make completes...
 
@@ -248,6 +252,7 @@ Congratulations, you've made 32-bit Qt.  After make completes...
 	Move all LIB etc from ...\qt\qtbase\lib to ...\qt\win32\lib
 	Move everything from ...\qt\qtbase\plugins to ...\qt\win32\plugins
 
+### building GUI ###
 
 Whew.  Now we're finally ready to make **bitcoin-qt**.  To start we have to preprocess a bunch of Qt source and interface definitions.  This has been packaged as a BAT file which ships in this repo alongside the project files.  The script runs Qt tools lcreate (language translator), moc (meta-object compiler), and rcc (resource compiler, as well as a tool called protoc which is built as part of Google's Protocol Buffers.  Open a Visual Studio 2013 x86 shell, and:
 
