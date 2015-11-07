@@ -147,9 +147,6 @@
     <ClCompile Include="$(ProjectDir)\bitcoin\src\ecwrapper.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\hash.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\init.cpp" />
-    <ClCompile Include="$(ProjectDir)\bitcoin\src\json\json_spirit_reader.cpp" />
-    <ClCompile Include="$(ProjectDir)\bitcoin\src\json\json_spirit_value.cpp" />
-    <ClCompile Include="$(ProjectDir)\bitcoin\src\json\json_spirit_writer.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\key.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\keystore.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\leveldbwrapper.cpp" />
@@ -190,7 +187,6 @@
     <ClCompile Include="$(ProjectDir)\bitcoin\src\txdb.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\txmempool.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\uint256.cpp" />
-    <ClCompile Include="$(ProjectDir)\bitcoin\src\univalue\gen.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\univalue\univalue.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\univalue\univalue_read.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\univalue\univalue_write.cpp" />

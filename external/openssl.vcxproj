@@ -84,7 +84,7 @@ SET INCLUDE=%INCLUDE%;$(SolutionDir)\zlib\
 SET LIB=%LIB%;$(SolutionDir)\lib\$(Platform)\$(Configuration)
 SET _PREFIX=$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)
 SET _WARNINGS=-wd4996
-SET _CONFIG_OPTIONS=
+SET _CONFIG_OPTIONS=-DOPENSSL_NO_CAPIENG
 SET "_TYPE=static"
 
 
@@ -181,7 +181,7 @@ SET INCLUDE=%INCLUDE%;$(SolutionDir)\zlib\
 SET LIB=%LIB%;$(SolutionDir)\lib\$(Platform)\$(Configuration)
 SET _PREFIX=$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)
 SET _WARNINGS=-wd4996
-SET _CONFIG_OPTIONS=
+SET _CONFIG_OPTIONS=-DOPENSSL_NO_CAPIENG
 SET "_TYPE=static"
 
 
@@ -287,7 +287,7 @@ SET INCLUDE=%INCLUDE%;$(SolutionDir)\zlib\
 SET LIB=%LIB%;$(SolutionDir)\lib\$(Platform)\$(Configuration)
 SET _PREFIX=$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)
 SET _WARNINGS=-wd4996
-SET _CONFIG_OPTIONS=
+SET _CONFIG_OPTIONS=-DOPENSSL_NO_CAPIENG
 SET "_TYPE=static"
 
 
@@ -396,7 +396,7 @@ SET INCLUDE=%INCLUDE%;$(SolutionDir)\zlib\
 SET LIB=%LIB%;$(SolutionDir)\lib\$(Platform)\$(Configuration)
 SET _PREFIX=$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)
 SET _WARNINGS=-wd4996
-SET _CONFIG_OPTIONS=
+SET _CONFIG_OPTIONS=-DOPENSSL_NO_CAPIENG
 SET "_TYPE=static"
 
 

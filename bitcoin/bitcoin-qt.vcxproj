@@ -372,7 +372,6 @@ qwindows.lib;%(AdditionalDependencies)</AdditionalDependencies>
     <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoinaddressvalidator.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoinamountfield.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoingui.cpp" />
-    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoinstrings.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoinunits.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\clientmodel.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\coincontroldialog.cpp" />
@@ -414,6 +413,7 @@ qwindows.lib;%(AdditionalDependencies)</AdditionalDependencies>
     <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\walletmodeltransaction.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\walletview.cpp" />
     <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\winshutdownmonitor.cpp" />
+    <ClCompile Include="build\bitcoinstrings.cpp" />
     <ClCompile Include="build\moc_addressbookpage.cpp" />
     <ClCompile Include="build\moc_addresstablemodel.cpp" />
     <ClCompile Include="build\moc_askpassphrasedialog.cpp" />

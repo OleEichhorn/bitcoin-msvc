@@ -219,9 +219,6 @@
     <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoingui.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
-    <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoinstrings.cpp">
-      <Filter>Generated Files</Filter>
-    </ClCompile>
     <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\bitcoinunits.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
@@ -343,6 +340,9 @@
       <Filter>Generated Files</Filter>
     </ClCompile>
     <ClCompile Include="$(ProjectDir)\bitcoin\src\qt\winshutdownmonitor.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="build\bitcoinstrings.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
   </ItemGroup>
