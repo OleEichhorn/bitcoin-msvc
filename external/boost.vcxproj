@@ -71,7 +71,7 @@ SET ZLIB_SOURCE=$(ProjectDir)\zlib
 SET VS_UNICODE_OUTPUT=""
 
 
-REM ** Check if need rebuild **
+ECHO ** Check if need rebuild **
 
 if exist "$(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost" exit
 
@@ -79,9 +79,9 @@ if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\build.ba
 if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe" (cd $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine &amp; call build.bat msvc) 
 
 
-REM ** Settings **
+ECHO ** Settings **
 
-SET _LIBRARIES= --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread --with-test
+SET _LIBRARIES= --with-atomic --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread --with-test
 SET _PARAMS= runtime-link=static threading=multi link=static
 rem SET _PARAMS= runtime-link=shared threading=multi link=shared
 SET _FLAGS="/wd4800 /wd4244 /wd4996 /wd4273 /wd4702 /wd4251"
@@ -89,14 +89,14 @@ SET _BUILD_DIR=$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\
 SET _STAGE_DIR=$(SolutionDir)\lib\$(Platform)\$(Configuration)
 
 
-REM ** Build **
+ECHO ** Build **
 
 cd $(ProjectDir)$(MSBuildProjectName)
 if not exist "$(ProjectDir)$(MSBuildProjectName)\boost" $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc headers  --build-dir=%_BUILD_DIR%
 $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc %_PARAMS% variant=$(Configuration.ToLower()) address-model=$(PlatformArchitecture) --build-dir=%_BUILD_DIR% --stagedir=%_STAGE_DIR% %_LIBRARIES% stage cxxflags=%_FLAGS%
 
 
-REM ** Install **
+ECHO ** Install **
 
 move /y $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib\libboost* $(SolutionDir)\lib\$(Platform)\$(Configuration)\ &gt; $(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost
 rd /s /q $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib
@@ -123,7 +123,7 @@ SET ZLIB_SOURCE=$(ProjectDir)\zlib
 SET VS_UNICODE_OUTPUT=""
 
 
-REM ** Check if need rebuild **
+ECHO ** Check if need rebuild **
 
 if exist "$(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost" exit
 
@@ -131,9 +131,9 @@ if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\build.ba
 if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe" (cd $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine &amp; call build.bat msvc) 
 
 
-REM ** Settings **
+ECHO ** Settings **
 
-SET _LIBRARIES= --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread --with-test
+SET _LIBRARIES= --with-atomic --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread --with-test
 SET _PARAMS= runtime-link=static threading=multi link=static
 rem SET _PARAMS= runtime-link=shared threading=multi link=shared
 SET _FLAGS="/wd4800 /wd4244 /wd4996 /wd4273 /wd4702 /wd4251"
@@ -141,14 +141,14 @@ SET _BUILD_DIR=$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\
 SET _STAGE_DIR=$(SolutionDir)\lib\$(Platform)\$(Configuration)
 
 
-REM ** Build **
+ECHO ** Build **
 
 cd $(ProjectDir)$(MSBuildProjectName)
-if not exist "$(ProjectDir)$(MSBuildProjectName)\boost" $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc headers  --build-dir=%_BUILD_DIR%
-$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc %_PARAMS% variant=$(Configuration.ToLower()) address-model=$(PlatformArchitecture) --build-dir=%_BUILD_DIR% --stagedir=%_STAGE_DIR% %_LIBRARIES% stage cxxflags=%_FLAGS%
+if not exist "$(ProjectDir)$(MSBuildProjectName)\boost" $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86_64\b2.exe toolset=msvc headers  --build-dir=%_BUILD_DIR%
+$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86_64\b2.exe toolset=msvc %_PARAMS% variant=$(Configuration.ToLower()) address-model=$(PlatformArchitecture) --build-dir=%_BUILD_DIR% --stagedir=%_STAGE_DIR% %_LIBRARIES% stage cxxflags=%_FLAGS%
 
 
-REM ** Install **
+ECHO ** Install **
 
 move /y $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib\libboost* $(SolutionDir)\lib\$(Platform)\$(Configuration)\ &gt; $(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost
 rd /s /q $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib
@@ -174,7 +174,7 @@ SET ZLIB_SOURCE=$(ProjectDir)\zlib
 SET VS_UNICODE_OUTPUT=""
 
 
-REM ** Check if need rebuild **
+ECHO ** Check if need rebuild **
 
 if exist "$(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost" exit
 
@@ -182,9 +182,9 @@ if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\build.ba
 if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe" (cd $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine &amp; call build.bat msvc) 
 
 
-REM ** Settings **
+ECHO ** Settings **
 
-SET _LIBRARIES= --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread --with-test
+SET _LIBRARIES= --with-atomic --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread --with-test
 SET _PARAMS= runtime-link=static threading=multi link=static
 rem SET _PARAMS= runtime-link=shared threading=multi link=shared
 SET _FLAGS="/wd4800 /wd4244 /wd4996 /wd4273 /wd4702 /wd4251"
@@ -192,14 +192,14 @@ SET _BUILD_DIR=$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\
 SET _STAGE_DIR=$(SolutionDir)\lib\$(Platform)\$(Configuration)
 
 
-REM ** Build **
+ECHO ** Build **
 
 cd $(ProjectDir)$(MSBuildProjectName)
 if not exist "$(ProjectDir)$(MSBuildProjectName)\boost" $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc headers  --build-dir=%_BUILD_DIR%
 $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc %_PARAMS% variant=$(Configuration.ToLower()) address-model=$(PlatformArchitecture) --build-dir=%_BUILD_DIR% --stagedir=%_STAGE_DIR% %_LIBRARIES% stage cxxflags=%_FLAGS%
 
 
-REM ** Install **
+ECHO ** Install **
 
 move /y $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib\libboost* $(SolutionDir)\lib\$(Platform)\$(Configuration)\ &gt; $(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost
 rd /s /q $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib
@@ -226,7 +226,7 @@ SET ZLIB_SOURCE=$(ProjectDir)\zlib
 SET VS_UNICODE_OUTPUT=""
 
 
-REM ** Check if need rebuild **
+ECHO ** Check if need rebuild **
 
 if exist "$(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost" exit
 
@@ -234,9 +234,9 @@ if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\build.ba
 if not exist "$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe" (cd $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine &amp; call build.bat msvc) 
 
 
-REM ** Settings **
+ECHO ** Settings **
 
-SET _LIBRARIES= --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread --with-test
+SET _LIBRARIES= --with-atomic --with-chrono --with-date_time --with-filesystem --with-program_options --with-regex --with-system --with-thread --with-test
 SET _PARAMS= runtime-link=static threading=multi link=static
 rem SET _PARAMS= runtime-link=shared threading=multi link=shared
 SET _FLAGS="/wd4800 /wd4244 /wd4996 /wd4273 /wd4702 /wd4251"
@@ -244,14 +244,14 @@ SET _BUILD_DIR=$(SolutionDir)\_int\$(ProjectName)\$(Platform)\$(Configuration)\
 SET _STAGE_DIR=$(SolutionDir)\lib\$(Platform)\$(Configuration)
 
 
-REM ** Build **
+ECHO ** Build **
 
 cd $(ProjectDir)$(MSBuildProjectName)
-if not exist "$(ProjectDir)$(MSBuildProjectName)\boost" $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc headers  --build-dir=%_BUILD_DIR%
-$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86\b2.exe toolset=msvc %_PARAMS% variant=$(Configuration.ToLower()) address-model=$(PlatformArchitecture) --build-dir=%_BUILD_DIR% --stagedir=%_STAGE_DIR% %_LIBRARIES% stage cxxflags=%_FLAGS%
+if not exist "$(ProjectDir)$(MSBuildProjectName)\boost" $(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86_64\b2.exe toolset=msvc headers  --build-dir=%_BUILD_DIR%
+$(ProjectDir)$(MSBuildProjectName)\tools\build\src\engine\bin.ntx86_64\b2.exe toolset=msvc %_PARAMS% variant=$(Configuration.ToLower()) address-model=$(PlatformArchitecture) --build-dir=%_BUILD_DIR% --stagedir=%_STAGE_DIR% %_LIBRARIES% stage cxxflags=%_FLAGS%
 
 
-REM ** Install **
+ECHO ** Install **
 
 move /y $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib\libboost* $(SolutionDir)\lib\$(Platform)\$(Configuration)\ &gt; $(SolutionDir)\lib\$(Platform)\$(Configuration)\libboost
 rd /s /q $(SolutionDir)\lib\$(Platform)\$(Configuration)\lib

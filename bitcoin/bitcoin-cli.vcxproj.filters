@@ -6,6 +6,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="$(ProjectDir)..\bitcoin\src\bitcoin-cli.cpp" />
+    <ClCompile Include="$(ProjectDir)\bitcoin\src\bitcoin-cli.cpp" />
   </ItemGroup>
 </Project>

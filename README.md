@@ -2,7 +2,22 @@
 Projects and procedures to build Bitcoin Core with MS Visual Studio
 
 1.0 - 7/2/15 - initial release for Bitcoin Core 0.10.2 with Visual Studio 2013  
-1.1 - 11/6/15 - support for Bitcoin Core 0.12.1 with Visual Studio 2015 (includes OpenSSL 1.0.2d)
+1.1 - 11/6/15 - support for Bitcoin Core 0.11.1 with Visual Studio 2013 (includes OpenSSL 1.0.2d)
+1.2 - 11/7/15 - support miniupnpc-1.9.20151026 (fixes buffer overrun vulnerability)
+1.3 - 3/5/16 - support for Bitcoin Classic 0.11.2 with Visual Studio 2013
+
+Current Versions
+Bitcoin
+- bitcoin	bitcoinclassic-0.11.2.cl1
+External
+- berkeleydb	db_4.8.30.NC
+- boost	boost_1.56.0
+- miniupnpc	miniupnpc_1.9 (2015.1026)
+- openssl	openssl_1.0.2d
+- protobuf	protobuf-2.6.1
+- qrencode	qrencode-3.4.4
+- qt	qt-everywhere-opensource-src-5.4.2
+- zlib	zlib_1.2.8
 
 There are three parts to this readme.  The first part is a rant.  Please feel free to skip :)  The second part is a cookbook for building Bitcoin Core with Microsoft Visual Studio.  This Git repository includes the project files you'll need to do this.  The third part talks about initializing the blockchain.
 
@@ -37,7 +52,7 @@ Yeah, whew.
 
 Each of these has its own source code stored somewhere on the Internet, each has its own configuration, building, and configuration scripts, and each has its own pattern for how source, object, libraries, and executables should be arranged.  Let's not talk about compiler options, static vs dynamic linking, debug vs release builds, etc.  And let's not *even* talk about 32-bit vs 64-bit.  Well okay we will talk about all of these things.
 
-**BerkeleyDB** is fortunately a simple case.  The source code is available here*: http://download.oracle.com/berkeley-db, and includes template MSVC project files.  Of course, the templates are for VS2008, so some adjustment is required to VS2015.
+**BerkeleyDB** is fortunately a simple case.  The source code is available here*: http://download.oracle.com/berkeley-db, and includes template MSVC project files.  Of course, the templates are for VS2008, so some adjustment is required to VS2013.
 
 	* Specific instructions for downloading and installation are in the cookbook below
 
@@ -155,7 +170,7 @@ Download the libQREncode source http://fukuchi.org/works/qrencode and unzip to:
 
 Download the MiniUPnPc source http://miniupnp.free.fr/files/download.php to:
 	`<path>\external\miniupnp`
-	Maybe name it `miniupnpc_1.9` and `>mklink /j miniupnpc miniupnpc_1.9`
+	Maybe name it `miniupnpc-1.9.20151026` and `>mklink /j miniupnpc miniupnpc-1.9.20151026`
 
 	Here's a special little thing you have to do ... Create `<path>/external/miniupnpc/miniupnpcstrings.h`, with this content:
 
@@ -216,12 +231,12 @@ they are not needed and while they appear correct, they cause compile errors (!)
 
 ### building daemon and command line tools ###
 
-Okay!  Let's build all the external libraries.  Launch VS 2015, open the `<path>\external\bitcoinExternal.sln` solution, and build all of the external libraries.  Each one has a separate project in this solution.  You can build them each for two platforms, win32 and x64, and two configurations, Debug and Release.  If all went well, this will all work.  The diciest parts are the shell scripts for Boost and OpenSLL.  Good luck!
+Okay!  Let's build all the external libraries.  Launch VS 2013, open the `<path>\external\bitcoinExternal.sln` solution, and build all of the external libraries.  Each one has a separate project in this solution.  You can build them each for two platforms, win32 and x64, and two configurations, Debug and Release.  If all went well, this will all work.  The diciest parts are the shell scripts for Boost and OpenSLL.  Good luck!
 
 
 Yay, we're making progress.  Now let's make Bitcoin Core.
 
-From within VS 2015, load the `<path>\bitcoin\bitcoin.sln` solution.  This has a number of projects, including four for each of the executables.  At this point go ahead and build **bitcoin-cli**, **bitcoind**, and **bitcoin-tx**.  As with the external libraries you can build each one for each of the two platforms and configurations.  Hold off on **bitcoin-qt** for now.  This should work, and you now have a working version of **bitcoind**, and you can talk to it with **bitcoin-cli** and **bitcoin-tx**.  Yay.  
+From within VS 2013, load the `<path>\bitcoin\bitcoin.sln` solution.  This has a number of projects, including four for each of the executables.  At this point go ahead and build **bitcoin-cli**, **bitcoind**, and **bitcoin-tx**.  As with the external libraries you can build each one for each of the two platforms and configurations.  Hold off on **bitcoin-qt** for now.  This should work, and you now have a working version of **bitcoind**, and you can talk to it with **bitcoin-cli** and **bitcoin-tx**.  Yay.  
 
 It's possible this is all you wanted, because you want to run a "full node" on a server; if so, you'd done!  Congratulations and take the rest of this readme off.  However if you want the Bitcoin Core GUI, then ... here we go.
 
@@ -240,7 +255,7 @@ Download the Qt source http://download.qt.io/official_releases/qt and unzip it t
 	Within `<path>\external\qt\qtbase\include`, make a link to OpenSLL:
 		>mklink /j openssl <path>\external\openssl\include\opensll
  
-Okay, now launch a Visual Studio 2015 x64 shell.  This can be done from the Visual Studio Tools folder in the start menu.  Now:
+Okay, now launch a Visual Studio 2013 x64 shell.  This can be done from the Visual Studio Tools folder in the start menu.  Now:
 
 	cd <path>\external\qt
 	configure -prefix %CD%\qtbase -static -developer-build -opensource -openssl -opengl desktop -nomake tests -nomake examples -platform win32-msvc2013
@@ -258,7 +273,7 @@ Now, if you also want to make 32-bit Qt, you can do so, by doing the following..
 	Delete *.obj from ...\qt\qtbase
 	Search makefile* in ...\qt\qtbase and delete recently generated.  You can tell from the timestamps which are the output from the build and which are part of the source.
 
-Launch a Visual Studio 2015 x86 shell.  Again, from the Visual Studio Tools folder.  Then:
+Launch a Visual Studio 2013 x86 shell.  Again, from the Visual Studio Tools folder.  Then:
 
 	cd <path>\external\qt
 	configure -prefix %CD%\qtbase -static -developer-build -opensource -openssl -opengl desktop -nomake tests -nomake examples -platform win32-msvc2013
@@ -273,7 +288,7 @@ Congratulations, you've made 32-bit Qt.  After make completes...
 
 ### building GUI ###
 
-Whew.  Now we're finally ready to make **bitcoin-qt**.  To start we have to preprocess a bunch of Qt source and interface definitions.  This has been packaged as a BAT file which ships in this repo alongside the project files.  The script runs Qt tools lcreate (language translator), moc (meta-object compiler), and rcc (resource compiler, as well as a tool called protoc which is built as part of Google's Protocol Buffers.  Open a Visual Studio 2015 x86 shell, and:
+Whew.  Now we're finally ready to make **bitcoin-qt**.  To start we have to preprocess a bunch of Qt source and interface definitions.  This has been packaged as a BAT file which ships in this repo alongside the project files.  The script runs Qt tools lcreate (language translator), moc (meta-object compiler), and rcc (resource compiler, as well as a tool called protoc which is built as part of Google's Protocol Buffers.  Open a Visual Studio 2013 x86 shell, and:
 
 	cd <path>\bitcoin
 	bitcoin-qt.bat
@@ -281,7 +296,7 @@ Whew.  Now we're finally ready to make **bitcoin-qt**.  To start we have to prep
 
 Normally you would only do this once.  If you *change* anything in the user interface - by editing the Qt forms, etc - then you should rerun this batch file before rebuilding.  In principle this batch file could be a prebuild step in the Visual Studio project, but it seemed easier to break it out.
 
-Now launch VS 2015 again, and open the `<path>\bitcoin\bitcoin.sln solution`.  And then ... try building it!  You should be able to build it for both platforms and both configurations.
+Now launch VS 2013 again, and open the `<path>\bitcoin\bitcoin.sln solution`.  And then ... try building it!  You should be able to build it for both platforms and both configurations.
 
 Note that the output executables can be found in `<path>\bitcoin\bin`
 

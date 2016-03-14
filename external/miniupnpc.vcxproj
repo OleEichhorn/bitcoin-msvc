@@ -142,6 +142,8 @@
     <ClCompile Include="$(ProjectName)\upnpcommands.c" />
     <ClCompile Include="$(ProjectName)\upnperrors.c" />
     <ClCompile Include="$(ProjectName)\upnpreplyparse.c" />
+    <ClCompile Include="miniupnpc\minissdpc.c" />
+    <ClCompile Include="miniupnpc\upnpdev.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(ProjectName)\connecthostport.h" />
